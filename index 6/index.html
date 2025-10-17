@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://maryam03.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script src="index.js"></script>
+  <div class="navbar">
+    <div class="logo">
+      <h2>Portfolio</h2>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul id="nav-links">
+      <li><a href="https://maryam03.netlify.app/#home">Home</a></li>
+      <li><a href="https://maryam03.netlify.app/#about-us">About us</a></li>
+      <li><a href="https://maryam03.netlify.app/#skill">Portfolio</a></li>
+      <li><a href="https://maryam03.netlify.app/#Resume">Resume</a></li>
+      <li><a href="https://maryam03.netlify.app/#testimonial">Testimonial</a></li>
+      <li><a href="https://maryam03.netlify.app/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</script>
+  <section id="home"> 
+    <div class="header">
+      <h1>Hello I'm Maryam Farooq.</h1>
+    </div>
+    <div class="typing" id="typing">I craft creative w</div>
+<script>
+const texts = [  "I'm a Web Designer.",
+    "I craft creative websites.",];
+let i = 0, j = 0, currentText = "", isDeleting = false;
+const typingSpeed = 100, erasingSpeed = 50, delay = 1000;
+function type() {
+    if(i < texts.length) {
+        if(!isDeleting && j <= texts[i].length) {
+            currentText = texts[i].substring(0, j);
+            document.getElementById("typing").innerHTML = currentText;
+            j++;
+            setTimeout(type, typingSpeed);
+        } else if(isDeleting && j >= 0) {
+            currentText = texts[i].substring(0, j);
+            document.getElementById("typing").innerHTML = currentText;
+            j--;
+            setTimeout(type, erasingSpeed);
+        } else {
+            isDeleting = !isDeleting;
+            if(!isDeleting) i++;
+            setTimeout(type, delay);
+        }
+    } else {
+        i = 0;
+        setTimeout(type, delay);
+    }
+}
+type();
+</script>
+</section>
+  <section id="about-us">
+    <div class="container">
+      <div class="about-image slide-left show">
+        <img src="a.jpg" alt="Profile">
+      </div>
+      <div class="about-content slide-right show">
+        <h2>About Me</h2>
+        <p>Hello, I’m Maryam Farooq. I am a web developer with skills in HTML, CSS, and JavaScript. I am currently studying and have 6 months of experience working full-time and freelancing. I focus on making websites that are simple and user-friendly. I am eager to learn more and take part in new projects. Please check my portfolio and contact me if you want to collaborate.</p>
+        <div class="about-info">
+          <div class="left">
+            <p><span>Name:</span> Maryam Farooq</p>
+            <p><span>Profession:</span> Web Developer</p>
+            <p><span>Phone:</span> 03290404373</p>
+          </div>
+          <div class="right">
+            <p><span>Email:</span> momi@gmail.com</p>
+            <p><span>Website:</span> portfolio.com</p>
+            <p><span>Location:</span> Pakistan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  const elements = document.querySelectorAll('.slide-left, .slide-right');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+</script>
+<div class="skills">
+  <h1>My Skills</h1>
+  <p>It is a long established fact that a reader will be distracted by the readable <br>
+content of a page when looking at its layout</p>
+</div>
+<div class="skills-section">
+  <div class="skill">
+    <div class="skill-name">
+      HTML <span class="skill-percent">90%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="--percent:90%;"></div>
+    </div>
+  </div>
+  <div class="skill">
+    <div class="skill-name">
+      CSS <span class="skill-percent">85%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="--percent:85%;"></div>
+    </div>
+  </div>
+  <div class="skill">
+    <div class="skill-name">
+      JavaScript <span class="skill-percent">70%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="--percent:70%;"></div>
+    </div>
+  </div>
+</div>
+<section id="skill"> 
+<div class="skills">
+    <h1>Our work</h1>
+    <p>It is a long established fact that a reader will be distracted by the readable <br>
+content of a page when looking at its layout</p>
+</div>
+<div class="image-row">
+ <a href="Index 4/index.html" target="_blank">
+  <img src="web 1.jpeg" alt="Image 1">
+</a>
+ <a href="Index 5/index.html" target="_blank">
+  <img src="web 2.jpeg" alt="Image 1">
+</a>
+ <a href="./Portfolio Web_files/web 3.jpeg" target="_blank">
+  <img src="web 3.jpeg" alt="Image 1">
+</a>
+ <a href="web 3.jpeg" target="_blank">
+  <img src="web 3.jpeg" alt="Image 1">
+</a>
+ <a href="./Portfolio Web_files/web 3.jpeg" target="_blank">
+  <img src="web 3.jpeg" alt="Image 1">
+</a>
+ <a href="./Portfolio Web_files/web 3.jpeg" target="_blank">
+  <img src="web 3.jpeg" alt="Image 1">
+</a>
+</div>
+  </section>
+      <section id="Resume">
+  <div class="dat">
+    <div class="resume-section">
+      <div class="column">
+        <h2 class="section-title">Education</h2>
+        <div class="resume-box">
+          <span class="year">March 2025 - Present October</span>
+          <h4>Current Studies</h4>
+          <p>I’m currently continuing my studies while learning Web Development. My semester is ongoing, and I’m focusing on front-end development including HTML, CSS, and responsive design.</p>
+          <div class="place">Currently Studying Web Development</div>
+        </div>
+        <div class="resume-box">
+          <span class="year">March 2025 - Present October</span>
+          <h4>Matriculation (Science)</h4>
+          <p>I have completed my Matric education with a strong interest in computer technology and web designing. This is where I started learning about websites and coding basics.</p>
+          <div class="place">Matriculation (Science)</div>
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="section-title">Experience</h2>
+        <div class="resume-box">
+          <span class="year">March 2025 - Present October</span>
+          <h4> Website Developer</h4>
+          <p>I’m working as a beginner website developer, creating small projects and practicing front-end development. I enjoy designing clean, responsive, and user-friendly websites.</p>
+          <div class="place">Freelance Website Developer</div>
+        </div>
+        <div class="resume-box">
+          <span class="year">March 2025 - Present October</span>
+          <h4>Learning &amp; Practice Projects</h4>
+          <p>I regularly create demo websites to practice layout, styling, and responsive design. Each project helps me improve my coding skills and design sense.</p>
+          <div class="place">Personal Practice Projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+      <section id="Resume">
+  <div class="stats-area">
+  <div class="stats-wrapper">
+    <div class="stats-item">
+      <div class="stats-icon"><i class="fa-solid fa-truck"></i></div>
+      <div class="stats-number">0</div>
+      <div class="stats-title">Projects Delivered</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-icon"><i class="fa-regular fa-face-smile"></i></div>
+      <div class="stats-number">0</div>
+      <div class="stats-title">Happy Customer</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+      <div class="stats-number">0</div>
+      <div class="stats-title">Downloads</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-icon"><i class="fa-solid fa-trophy"></i></div>
+      <div class="stats-number">0</div>
+      <div class="stats-title">Awards Win</div>
+    </div>
+  </div>
+</div>
+<section class="testimonial-section" id="testimonial">
+  <h2>Our Testimonials</h2>
+  <p class="subtitle">What people say about my work and learning journey </p>
+  <div class="testimonial-container">
+    <div class="testimonial-box">
+      <img src="t 1.jpeg" alt="Client 1">
+      <h4>Ali Khan</h4>
+      <span>Student, Karachi</span>
+      <p>"Working with her was amazing! She created a clean and responsive website that looked perfect on all devices."</p>
+    </div>
+    <div class="testimonial-box">
+      <img src="t 3.jpeg" alt="Client 2">
+      <h4>Sara Ahmed</h4>
+      <span>Freelancer</span>
+      <p>"Very dedicated and creative developer. I loved how she paid attention to every detail of the design!"</p>
+    </div>
+    <div class="testimonial-box">
+      <img src="t 2.jpeg" alt="Client 3">
+      <h4>Hamza Malik</h4>
+      <span>Web Designer</span>
+      <p>"A fast learner and talented beginner. Her portfolio already shows great potential in front-end development."</p>
+    </div>
+  </div>
+</section>
+  </section>
+  <section class="contact-section" id="contact">
+  <h2>Contact Me</h2>
+  <p>Have a question or want to work together? Feel free to send me a message!</p>
+  <div class="contact-box">
+    <form action="https://maryam03.netlify.app/#">
+      <input type="text" placeholder="Your Name" required="">
+      <input type="email" placeholder="Your Email" required="">
+      <textarea rows="5" placeholder="Your Message..." required=""></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <div class="contact-details">
+    <div><strong>Email:</strong> momi@gmail.com</div>
+    <div><strong>Phone:</strong> +92 300 1234567</div>
+    <div><strong>Location:</strong> Pakistan</div>
+  </div>
+</section>
+   <footer>
+        <div class="footer-content">
+            <h3>My Portfolio Website</h3>
+            <p>Designing with passion and purpose. Building modern, elegant and creative websites with heart.</p>
+            <p class="copy"> 2025 My Website | Designed with elegance by Maryam</p>
+        </div>
+    </footer>
+</body>
+</html>
